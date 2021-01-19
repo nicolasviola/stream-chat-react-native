@@ -5,7 +5,6 @@ import { replaceCssShorthand, ThemeType } from './utils/replaceCssShorthand';
 
 import {
   StyledComponentsThemeProvider,
-  useTheme,
 } from '../../styles/styledComponents';
 import { defaultTheme } from '../../styles/themeConstants';
 import { formatDotNotation } from './utils/formatDotNotation';
@@ -16,7 +15,6 @@ export type ThemeProviderInputValue = {
 
 export const ThemeProvider: React.FC<ThemeProviderInputValue> = (props) => {
   const { children, style } = props;
-  const theme = useTheme();
   const modifiedTheme = defaultTheme;
 
   if (style) {
